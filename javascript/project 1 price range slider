@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Custom Price Range Slider--GFG</title>
+    <link rel="stylesheet" href="pg 1 price range slider.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="main">
+        <div class="gfg">
+            <p>GeeksForGeeks</p>
+        </div>
+        <div class="custom-wrapper">
+        <div class="header">
+            <h2 class="projtitle">Price Range Slider</h2>
+        </div>
+        <div class="price-input-container">
+            <div class="price-input">
+                <div class="price-field">
+                    <span>Minimum Price</span>
+                    <input type="number" class="min-input" value="2500">
+                </div>
+                <div class="price-field">
+                    <span>Maximum Price</span>
+                    <input type="number" class="min-input" value="8500">
+                </div>
+            </div>
+            <div class="slider-container">
+                <div class="price-slider"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--Slider-->
+    <div class="range-input">
+        <input type="range" class="min-range" min="0" max="10000" value="2500" step="1">
+        <input type="range" class="min-range" min="0"
+        max="10000" value="8500" step="1">
+      </div>
+   </div>
+<!-- </div> -->
+    <script src="pg 1 price range slider.js"></script>
+</body>
+</html>
+
+_____________________________________________________________________________________________________________________________
+
+css file :-
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* spread height of body element to the bottom of webpage */
+    background-color: #ffffff;
+    flex-direction: column; /* spread body element horizontally */
+}
+
+.main{
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: transform 0.2s;
+    width: 600px;
+}
+
+
+.main:hover{
+  transform: scale(1.05);
+}
+
+.gfg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600px;
+    color: #01940b;
+}
+
+.custom-wrapper{
+    margin: 0;
+    width: 70%;
+}
+
+____________________________________________________________________________________________________________________________________
+js file :-
+
+
+
+
+
+
+
+
+
+____________________________________________________________________________________________________________________________________
+chat gpt solution :-
+
+
+what is span tag
+
+ChatGPT
+The <span> tag is an inline container in HTML used to group elements for styling purposes, usually with CSS, or to manipulate them with JavaScript. Unlike block-level elements, which take up the full width available, inline elements like <span> only take up as much width as their content requires.
+
+Common Uses of <span> Tag
+Styling: You can apply CSS styles to a specific portion of text or other inline elements.
+Scripting: You can interact with specific parts of a document using JavaScript.
+Class and ID Attributes: You can use the class and id attributes to apply styles or manipulate elements.
+Example
+Here’s a simple example to illustrate how the <span> tag can be used:
+
+html
+Copy code
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <p>This is a <span class="highlight">highlighted</span> word in a sentence.</p>
+</body>
+</html>
+In this example:
+
+The <span> tag is used to wrap the word "highlighted".
+The CSS class .highlight is applied to the <span> tag, changing the color of the text to red and making it bold.
+The <span> tag itself does not have any visual effect on the content but is useful for applying styles or scripting actions to specific parts of the text.
+
+span tag in easy language with examples
+ChatGPT
+The <span> tag in HTML is like a highlighter for specific parts of text. It lets you change how that part looks or behaves without affecting the rest of the text. Think of it as a way to pick out and style just a few words or characters inside a paragraph.
+
+Example 1: Highlighting Text
+Imagine you want to make one word in a sentence bold and red. You can use the <span> tag to do this.
+
+html
+Copy code
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <p>This is a <span class="highlight">highlighted</span> word in a sentence.</p>
+</body>
+</html>
+Here’s what happens:
+
+The word "highlighted" is wrapped in a <span> tag.
+The CSS class .highlight changes the word's color to red and makes it bold.
+Example 2: Changing Font Style
+Let's say you want to change the font style of a part of the text.
+
+html
+Copy code
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .italic {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <p>This is an <span class="italic">italicized</span> word in a sentence.</p>
+</body>
+</html>
+In this example:
+
+The word "italicized" is wrapped in a <span> tag.
+The CSS class .italic changes the font style to italic.
+Example 3: Adding a Tooltip
+Suppose you want to show extra information when hovering over a specific word.
+
+html
+Copy code
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <p>This is a <span class="tooltip">tooltip<span class="tooltiptext">Extra info here</span></span> example.</p>
+</body>
+</html>
+In this example:
+
+The word "tooltip" is wrapped in a <span> tag with the class tooltip.
+Another <span> inside it with the class tooltiptext contains the extra information.
+When you hover over the word "tooltip," the extra information appears.
+The <span> tag is versatile and helps you style or script specific parts of your text, making it a handy tool in web development.
