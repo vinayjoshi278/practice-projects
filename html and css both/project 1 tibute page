@@ -77,3 +77,85 @@ Dr. Abdul Kalam's life is a testament to the power of hard work, vision, and ded
     <p class="end">If you have time, you should read more about this incredible human being on his <a href="https://en.wikipedia.org/wiki/A._P._J._Abdul_Kalam">Wikipedia entry</a>, or visit his Website.</p>
 </body>
 </html>
+__________________________________________________________________________________________________________________________________________________________________
+
+css file :-
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family:sans-serif;
+    font-weight: 900;
+}
+
+.header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #f8f9f8;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body{
+    background-image: url('bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+ }
+
+ .container{
+    text-align: center;
+    width: 300px;
+    margin: 0 ;
+ }
+
+ .container img{
+    display: block;
+    margin-top: 100px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px  rgba(0, 0, 0, 0.3) ;
+    object-fit: cover;
+ }
+
+ .container h2{
+    margin-top: 10px;
+    font-size: 24px;
+    color: #333;
+ }
+
+ .centered-paragraph{
+    width: 60%;
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+ }
+
+
+
+ .end{
+    background-color: #333;
+    margin-top: 15px;
+    margin-left: 10px;
+    text-align: justify;
+    padding: 20px;
+    bottom: 0;
+    font-size: 19px;
+    letter-spacing: 1px;  
+    color:wheat;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color:crimson;
+}
+
