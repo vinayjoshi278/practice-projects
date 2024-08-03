@@ -85,14 +85,232 @@ body{
     color: #01940b;
 }
 
-.custom-wrapper{
+.custom-wrapper {
     margin: 0;
     width: 70%;
+    padding: 0px 25px 40px;
+    position: relative;
+    left: 63px;
+}
+
+.header h2 {
+    font-size: 30px;
+    color: #01940b;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Styles for the price input container */
+.price-input-container {
+    width: 100%;
+}
+
+.price-input .price-field {
+    display: flex;
+    margin-bottom: 22px;
+}
+
+.price-field span {
+    margin-right: 10px;
+    margin-top: 6px;
+    font-size: 17px;
+}
+
+.price-field input {
+    flex: 1;
+    height: 35px;
+    font-size: 15px;
+    font-family: "DM Sans", sans-serif;
+    border-radius: 9px;
+    text-align: center;
+    border: 0px;
+    background: #e4e4e4;
+}
+
+.price-input {
+    width: 100%;
+    font-size: 19px;
+    color: #555;
+}
+
+/* Remove Arrows/Spinners */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.slider-container {
+    width: 100%;
+}
+
+.slider-container {
+    height: 6px;
+    position: relative;
+    background: #e4e4e4;
+    border-radius: 5px;
+}
+
+.slider-container .price-slider {
+    height: 100%;
+    left: 25%;
+    right: 15%;
+    position: absolute;
+    border-radius: 5px;
+    background: #01940b;
+}
+
+.range-input {
+    position: relative;
+}
+
+.range-input input {
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background: none;
+    top: -5px;
+    pointer-events: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+/* Styles for the range thumb in WebKit browsers */
+input[type="range"]::-webkit-slider-thumb {
+    height: 18px;
+    width: 18px;
+    border-radius: 70%;
+    background: #555;
+    pointer-events: auto;
+    -webkit-appearance: none;
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        width: 80%;
+        margin-right: 5px;
+    }
+
+    .custom-wrapper {
+        width: 100%;
+        left: 0;
+        padding: 0 10px;
+    }
+
+    .projtitle {
+        width: 100%;
+        position: relative;
+        right: 26px;
+    }
+
+    .price-input {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .price-field {
+        margin-bottom: 10px;
+    }
 }
 
 ____________________________________________________________________________________________________________________________________
 js file :-
 
+//  Script.js
+const rangevalue = 
+    document.querySelector(".slider-container .price-slider");
+const rangeInputvalue = 
+    document.querySelectorAll(".range-input input");
+
+// Set the price gap
+let priceGap = 500;
+
+// Adding event listners to price input elements
+const priceInputvalue = 
+    document.querySelectorAll(".price-input input");
+for (let i = 0; i < priceInputvalue.length; i++) {
+    priceInputvalue[i].addEventListener("input", e => {
+
+        // Parse min and max values of the range input
+        let minp = parseInt(priceInputvalue[0].value);
+        let maxp = parseInt(priceInputvalue[1].value);
+        let diff = maxp - minp
+
+        if (minp < 0) {
+            alert("minimum price cannot be less than 0");
+            priceInputvalue[0].value = 0;
+            minp = 0;
+        }
+
+        // Validate the input values
+        if (maxp > 10000) {
+            alert("maximum price cannot be greater than 10000");
+            priceInputvalue[1].value = 10000;
+            maxp = 10000;
+        }
+
+        if (minp > maxp - priceGap) {
+            priceInputvalue[0].value = maxp - priceGap;
+            minp = maxp - priceGap;
+
+            if (minp < 0) {
+                priceInputvalue[0].value = 0;
+                minp = 0;
+            }
+        }
+
+        // Check if the price gap is met 
+        // and max price is within the range
+        if (diff >= priceGap && maxp <= rangeInputvalue[1].max) {
+            if (e.target.className === "min-input") {
+                rangeInputvalue[0].value = minp;
+                let value1 = rangeInputvalue[0].max;
+                rangevalue.style.left = `${(minp / value1) * 100}%`;
+            }
+            else {
+                rangeInputvalue[1].value = maxp;
+                let value2 = rangeInputvalue[1].max;
+                rangevalue.style.right = 
+                    `${100 - (maxp / value2) * 100}%`;
+            }
+        }
+    });
+
+    // Add event listeners to range input elements
+    for (let i = 0; i < rangeInputvalue.length; i++) {
+        rangeInputvalue[i].addEventListener("input", e => {
+            let minVal = 
+                parseInt(rangeInputvalue[0].value);
+            let maxVal = 
+                parseInt(rangeInputvalue[1].value);
+
+            let diff = maxVal - minVal
+            
+            // Check if the price gap is exceeded
+            if (diff < priceGap) {
+            
+                // Check if the input is the min range input
+                if (e.target.className === "min-range") {
+                    rangeInputvalue[0].value = maxVal - priceGap;
+                }
+                else {
+                    rangeInputvalue[1].value = minVal + priceGap;
+                }
+            }
+            else {
+            
+                // Update price inputs and range progress
+                priceInputvalue[0].value = minVal;
+                priceInputvalue[1].value = maxVal;
+                rangevalue.style.left =
+                    `${(minVal / rangeInputvalue[0].max) * 100}%`;
+                rangevalue.style.right =
+                    `${100 - (maxVal / rangeInputvalue[1].max) * 100}%`;
+            }
+        });
+    }
+}
 
 
 
@@ -233,3 +451,628 @@ The word "tooltip" is wrapped in a <span> tag with the class tooltip.
 Another <span> inside it with the class tooltiptext contains the extra information.
 When you hover over the word "tooltip," the extra information appears.
 The <span> tag is versatile and helps you style or script specific parts of your text, making it a handy tool in web development.
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>
+          Custom Price Range Slider--GFG
+      </title>
+    <link rel="stylesheet" 
+          href="pg 1 price range slider.css">
+    <meta name="viewport" 
+          content="width=device-width, 
+                   initial-scale=1.0">
+</head>
+
+<body>
+    <div class="main">
+        <div class="gfg">
+            <p>GeeksForGeeks</p>
+        </div>
+        <div class="custom-wrapper">
+
+            <div class="header">
+                <h2 class="projtitle">
+                      Price Range Slider
+                  </h2>
+            </div>
+
+            <div class="price-input-container">
+                <div class="price-input">
+                    <div class="price-field">
+                        <span>Minimum Price</span>
+                        <input type="number" 
+                               class="min-input" 
+                               value="2500">
+                    </div>
+                    <div class="price-field">
+                        <span>Maximum Price</span>
+                        <input type="number" 
+                               class="max-input" 
+                               value="8500">
+                    </div>
+                </div>
+                <div class="slider-container">
+                    <div class="price-slider">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slider -->
+            <div class="range-input">
+                <input type="range" 
+                       class="min-range" 
+                       min="0" 
+                       max="10000" 
+                       value="2500" 
+                       step="1">
+                <input type="range" 
+                       class="max-range" 
+                       min="0" 
+                       max="10000" 
+                       value="8500" 
+                       step="1">
+            </div>
+        </div>
+    </div>
+    <script src="pg 1 price range slider.js"></script>
+</body>
+
+</html>
+
+ChatGPT
+Sure, let's go through this HTML code step by step.
+
+HTML Document Structure
+DOCTYPE Declaration:
+
+html
+Copy code
+<!DOCTYPE html>
+Defines the document type and version of HTML. This helps the browser understand how to render the document.
+HTML Tag:
+
+html
+Copy code
+<html lang="en">
+The root element of the HTML document.
+The lang attribute specifies the language of the document (English in this case).
+Head Section
+Head Tag:
+
+html
+Copy code
+<head>
+Contains meta-information about the document.
+Meta Charset:
+
+html
+Copy code
+<meta charset="utf-8">
+Specifies the character encoding for the HTML document (UTF-8).
+Title Tag:
+
+html
+Copy code
+<title>Custom Price Range Slider--GFG</title>
+Sets the title of the web page, which appears in the browser's title bar or tab.
+Link to External CSS:
+
+html
+Copy code
+<link rel="stylesheet" href="pg 1 price range slider.css">
+Links to an external CSS file for styling the page.
+Viewport Meta Tag:
+
+html
+Copy code
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+Ensures the webpage is responsive and adjusts to different screen sizes.
+Body Section
+Body Tag:
+html
+Copy code
+<body>
+Contains the content of the HTML document.
+Main Content
+Main Div:
+
+html
+Copy code
+<div class="main">
+A container for the main content of the page.
+GeeksForGeeks Header:
+
+html
+Copy code
+<div class="gfg">
+    <p>GeeksForGeeks</p>
+</div>
+A section with a paragraph displaying "GeeksForGeeks".
+Custom Wrapper Div:
+
+html
+Copy code
+<div class="custom-wrapper">
+A container for the custom elements like header, price inputs, and sliders.
+Header Section:
+
+html
+Copy code
+<div class="header">
+    <h2 class="projtitle">Price Range Slider</h2>
+</div>
+Contains a header with the title "Price Range Slider".
+Price Input Container:
+
+html
+Copy code
+<div class="price-input-container">
+A container for the price input fields and sliders.
+Price Input Div:
+
+html
+Copy code
+<div class="price-input">
+A container for the price input fields.
+Price Field Divs:
+
+html
+Copy code
+<div class="price-field">
+    <span>Minimum Price</span>
+    <input type="number" class="min-input" value="2500">
+</div>
+<div class="price-field">
+    <span>Maximum Price</span>
+    <input type="number" class="max-input" value="8500">
+</div>
+Each price-field contains a label (span) and an input field for minimum and maximum price.
+Slider Container:
+
+html
+Copy code
+<div class="slider-container">
+    <div class="price-slider"></div>
+</div>
+Contains the price slider.
+Slider Inputs
+Range Input Div:
+html
+Copy code
+<div class="range-input">
+    <input type="range" class="min-range" min="0" max="10000" value="2500" step="1">
+    <input type="range" class="max-range" min="0" max="10000" value="8500" step="1">
+</div>
+Contains two range input elements (type="range") for the minimum and maximum price sliders.
+JavaScript
+Script Tag:
+html
+Copy code
+<script src="pg 1 price range slider.js"></script>
+Links to an external JavaScript file to add functionality to the sliders.
+Closing Tags
+Closing Body and HTML Tags:
+html
+Copy code
+</body>
+</html>
+Close the body and HTML tags.
+This document sets up the structure for a webpage that includes a custom price range slider. It links to external CSS and JavaScript files for styling and functionality, respectively. The main content includes headers and input fields for setting and displaying price ranges, along with slider elements for adjusting those prices.
+
+/* Style.css */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #ffffff;
+    flex-direction: column;
+}
+
+.main {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px
+        rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: transform 0.2s;
+    width: 600px;
+}
+
+.main:hover {
+    transform: scale(1.05);
+}
+
+.gfg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #01940b;
+}
+
+.custom-wrapper {
+    margin: 0;
+    width: 70%;
+    padding: 0px 25px 40px;
+    position: relative;
+    left: 63px;
+}
+
+.header h2 {
+    font-size: 30px;
+    color: #01940b;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Styles for the price input container */
+.price-input-container {
+    width: 100%;
+}
+
+.price-input .price-field {
+    display: flex;
+    margin-bottom: 22px;
+}
+
+.price-field span {
+    margin-right: 10px;
+    margin-top: 6px;
+    font-size: 17px;
+}
+
+.price-field input {
+    flex: 1;
+    height: 35px;
+    font-size: 15px;
+    font-family: "DM Sans", sans-serif;
+    border-radius: 9px;
+    text-align: center;
+    border: 0px;
+    background: #e4e4e4;
+}
+
+.price-input {
+    width: 100%;
+    font-size: 19px;
+    color: #555;
+}
+
+/* Remove Arrows/Spinners */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.slider-container {
+    width: 100%;
+}
+
+.slider-container {
+    height: 6px;
+    position: relative;
+    background: #e4e4e4;
+    border-radius: 5px;
+}
+
+.slider-container .price-slider {
+    height: 100%;
+    left: 25%;
+    right: 15%;
+    position: absolute;
+    border-radius: 5px;
+    background: #01940b;
+}
+
+.range-input {
+    position: relative;
+}
+
+.range-input input {
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background: none;
+    top: -5px;
+    pointer-events: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+/* Styles for the range thumb in WebKit browsers */
+input[type="range"]::-webkit-slider-thumb {
+    height: 18px;
+    width: 18px;
+    border-radius: 70%;
+    background: #555;
+    pointer-events: auto;
+    -webkit-appearance: none;
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        width: 80%;
+        margin-right: 5px;
+    }
+
+    .custom-wrapper {
+        width: 100%;
+        left: 0;
+        padding: 0 10px;
+    }
+
+    .projtitle {
+        width: 100%;
+        position: relative;
+        right: 26px;
+    }
+
+    .price-input {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .price-field {
+        margin-bottom: 10px;
+    }
+}
+ChatGPT
+Sure! Let's break down this CSS code step by step.
+
+Universal Selector
+Reset Margin and Padding:
+css
+Copy code
+* {
+    margin: 0;
+    padding: 0;
+}
+The universal selector (*) is used to reset the margin and padding for all elements to zero, ensuring consistency across different browsers.
+Body Styling
+Body:
+css
+Copy code
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #ffffff;
+    flex-direction: column;
+}
+Sets up a flexbox container for the body.
+Centers content both vertically (align-items: center) and horizontally (justify-content: center).
+Ensures the body takes up at least the full height of the viewport (min-height: 100vh).
+Sets the background color to white (background: #ffffff).
+Arranges child elements in a column (flex-direction: column).
+Main Container Styling
+Main Container:
+css
+Copy code
+.main {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: transform 0.2s;
+    width: 600px;
+}
+
+.main:hover {
+    transform: scale(1.05);
+}
+Sets a white background color.
+Rounds the corners with a 15px border radius.
+Applies a shadow to create a floating effect.
+Adds 20px padding inside the container.
+Sets the width to 600px.
+Adds a hover effect that slightly enlarges the container (transform: scale(1.05)).
+GeeksForGeeks Section
+GeeksForGeeks Header:
+css
+Copy code
+.gfg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #01940b;
+}
+Centers the content.
+Sets the font size to 24px and font weight to 600.
+Colors the text in green (color: #01940b).
+Custom Wrapper
+Custom Wrapper:
+css
+Copy code
+.custom-wrapper {
+    margin: 0;
+    width: 70%;
+    padding: 0px 25px 40px;
+    position: relative;
+    left: 63px;
+}
+Sets zero margin.
+Sets the width to 70% of the parent element.
+Adds padding (25px left and right, 40px bottom).
+Positions the element relative to its normal position and moves it 63px to the left.
+Header
+Header:
+css
+Copy code
+.header h2 {
+    font-size: 30px;
+    color: #01940b;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+Styles the header (h2):
+Font size of 30px.
+Green color (color: #01940b).
+Centers the text.
+Adds 20px padding.
+Price Input Container
+Price Input Container:
+css
+Copy code
+.price-input-container {
+    width: 100%;
+}
+Sets the width to 100%.
+Price Input Fields
+Price Input:
+css
+Copy code
+.price-input .price-field {
+    display: flex;
+    margin-bottom: 22px;
+}
+
+.price-field span {
+    margin-right: 10px;
+    margin-top: 6px;
+    font-size: 17px;
+}
+
+.price-field input {
+    flex: 1;
+    height: 35px;
+    font-size: 15px;
+    font-family: "DM Sans", sans-serif;
+    border-radius: 9px;
+    text-align: center;
+    border: 0px;
+    background: #e4e4e4;
+}
+
+.price-input {
+    width: 100%;
+    font-size: 19px;
+    color: #555;
+}
+Styles the price input fields:
+price-field: Displays flex, 22px bottom margin.
+span: Adds 10px right margin, 6px top margin, 17px font size.
+input: Flexible width (flex: 1), 35px height, 15px font size, centered text, no border, light gray background, rounded corners (9px border-radius).
+Input Spin Buttons
+Remove Arrows/Spinners:
+css
+Copy code
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+Removes default arrows/spinners in number input fields for WebKit browsers.
+Slider Container
+Slider Container:
+css
+Copy code
+.slider-container {
+    width: 100%;
+}
+
+.slider-container {
+    height: 6px;
+    position: relative;
+    background: #e4e4e4;
+    border-radius: 5px;
+}
+
+.slider-container .price-slider {
+    height: 100%;
+    left: 25%;
+    right: 15%;
+    position: absolute;
+    border-radius: 5px;
+    background: #01940b;
+}
+Styles the container and the slider within it:
+Full width, 6px height, light gray background, 5px rounded corners.
+price-slider: Positioned absolutely within the container, covers from 25% to 85% of the width, green background.
+Range Input
+Range Input:
+css
+Copy code
+.range-input {
+    position: relative;
+}
+
+.range-input input {
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background: none;
+    top: -5px;
+    pointer-events: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+Positions the range input absolutely within the container, no background, 5px height, pointer events disabled (except for the thumb), and WebKit appearance set to none.
+Slider Thumb
+Range Thumb for WebKit Browsers:
+css
+Copy code
+input[type="range"]::-webkit-slider-thumb {
+    height: 18px;
+    width: 18px;
+    border-radius: 70%;
+    background: #555;
+    pointer-events: auto;
+    -webkit-appearance: none;
+}
+Styles the thumb for range inputs in WebKit browsers:
+18px height and width, rounded corners, dark gray background.
+Media Queries
+Responsive Design:
+css
+Copy code
+@media screen and (max-width: 768px) {
+    .main {
+        width: 80%;
+        margin-right: 5px;
+    }
+
+    .custom-wrapper {
+        width: 100%;
+        left: 0;
+        padding: 0 10px;
+    }
+
+    .projtitle {
+        width: 100%;
+        position: relative;
+        right: 26px;
+    }
+
+    .price-input {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .price-field {
+        margin-bottom: 10px;
+    }
+}
+Adjusts the layout for screens smaller than 768px:
+main: 80% width, 5px right margin.
+custom-wrapper: Full width, no left position, 10px padding.
+projtitle: Full width, 26px right positioning.
+price-input: Column direction, centered alignment.
+price-field: 10px bottom margin.
+This CSS code styles the HTML elements to create a visually appealing and responsive price range slider.
