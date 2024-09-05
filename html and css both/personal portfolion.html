@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="personal portfolion.css"/>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#skills">SKILLS</a></li>
+                <li><a href="#projects" target="_blank">PROJECTS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about"> <!-- section is used like when we click on SKILLS which is written in our nav element or in our nav bar so our page directly put us on the about section location of page on website and if we also type this in nav element  
+        
+        <li><a href="#projects" target="_blank">PROJECTS</a></li> 
+        
+    then when we click on PROJECTS which is written in our nav element or in our nav bar so new page opens automatically which also contains PROJECT on web page.-->
+
+
+        <h1>About Me</h1>
+        <article>
+        <p> HELLO ! I am Vinay Joshi, a passionatae web developer with a love for creating clean and user-friendly website. Below are some of the skills and projects I;'ve worked on.</p>
+        <img src="#" alt="my photo"/>     </article>
+    </section>
+
+    <section id="skills">
+         <h2>Skills</h2>
+         <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JS</li>
+            <li>React</li>
+            <li>Node.js</li>
+         </ul>
+    </section>
+
+    <section id="projects">
+            <h2>Projects</h2>
+            <article>
+                <p>Tribute page of apj abdul kalam : <a href="http://127.0.0.1:5500/pg%201%20tribute%20page.html">Click here !</a></p>
+            </article>
+            
+            <article>
+                <p>My latest project : <a href="#" target="_blank">Click here to view !</a></p> <!-- 
+                
+                "_blank" opens new page when we click on  Click here to view !
+                
+                -->
+            </article>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="submit_form.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <br>
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+
+            <br>
+
+            <label for="message">Message:</label>
+
+            <br> <!--this will help to show textarea directly after message label. this is done by me.-->
+
+            <textarea id="message" name="message" rows="4"required></textarea>
+
+            <br>
+            
+            <button type="submit">Send message</button> 
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Vinay Joshi, All rights reserved.</p>
+        <li><a href="https://github.com/" target="_blank"> Github </a></li>
+        <li><a href="https://www.linkedin.com/feed/" target="_blank"> LinkedIn </a></li>
+    </footer>
+</body>
+</html>
