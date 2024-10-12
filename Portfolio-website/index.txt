@@ -1,0 +1,574 @@
+this is code of responsive web site which is created by chat gpt 4.
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vinay - amazing portfolio(Web developer)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: rgb(0, 0, 33);
+        color: white;
+        font-family: "Poppins", sans-serif;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 80px;
+        background-color: rgb(18, 18, 62);
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      nav ul li {
+        list-style: none;
+        margin: 0 23px;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: white;
+      }
+
+      nav ul li a:hover {
+        color: rgb(153, 153, 226);
+      }
+
+      .left {
+        font-size: 1.5rem;
+      }
+
+      .firstSection {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 130px 0;
+        flex-wrap: wrap;
+        padding: 0 20px;
+      }
+
+      .firstSection > div {
+        width: 45%;
+        text-align: center;
+      }
+
+      .leftSection {
+        font-size: 3rem;
+      }
+
+      .rightSection img {
+        width: 80%;
+        margin: 50px 0;
+        max-width: 400px;
+      }
+
+      .purple {
+        color: rgb(170, 107, 228);
+      }
+
+      #element {
+        color: rgb(170, 107, 228);
+      }
+
+      .secondSection {
+        max-width: 90vw;
+        margin: auto;
+        height: auto;
+        padding: 0 20px;
+      }
+
+      main hr {
+        border: 0;
+        background: #9c97f1;
+        height: 1.2px;
+        margin: 40px 0;
+      }
+
+      .secondSection h1 {
+        font-size: 1.9rem;
+        text-align: center;
+      }
+
+      .text-gray {
+        color: gray;
+        text-align: center;
+      }
+
+      .secondSection .box {
+        background: white;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+
+      .secondSection .vertical {
+        background-color: rgb(18, 18, 62);
+        color: white;
+        margin: 16px;
+        width: 100%;
+        max-width: 300px;
+        padding: 16px;
+        border-radius: 10px;
+      }
+
+      .vertical img {
+        width: 40px;
+        margin-bottom: 10px;
+      }
+
+      .vertical-title {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+      }
+
+      .vertical-desc ul {
+        color: rgb(153 153 226);
+        font-weight: bolder;
+        text-align: left;
+      }
+
+      footer {
+        background-color: #0e0e1a;
+        padding: 12px 0;
+      }
+
+      .footer {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        padding: 0 20px;
+      }
+
+      .footer ul {
+        list-style: none;
+      }
+
+      .footer > div {
+        width: 223px;
+        text-align: center;
+      }
+
+      .footer-rights {
+        text-align: center;
+        color: gray;
+        padding: 12px 0;
+      }
+
+      .footer-second a p {
+        text-decoration: none;
+        color: white;
+      }
+
+      /* Media queries for responsiveness */
+      @media (max-width: 1024px) {
+        .leftSection {
+          font-size: 2.5rem;
+        }
+
+        .firstSection > div {
+          width: 90%;
+        }
+
+        .rightSection img {
+          width: 70%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        nav {
+          flex-direction: column;
+          height: auto;
+        }
+
+        .firstSection {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .secondSection h1 {
+          font-size: 1.5rem;
+        }
+
+        .leftSection {
+          font-size: 2rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .leftSection {
+          font-size: 1.8rem;
+        }
+
+        .rightSection img {
+          width: 100%;
+        }
+
+        .secondSection .box {
+          flex-direction: column;
+        }
+
+        .secondSection .vertical {
+          width: 100%;
+        }
+
+        nav ul li {
+          margin: 10px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left">Vinay's Portfolio</div>
+        <div class="right">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/">Contact Me</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="firstSection">
+        <div class="leftSection">
+          Hi, my name is <span class="purple">Vinay</span>
+          <div>and I am a passionate</div>
+          <span id="element"></span>
+        </div>
+        <div class="rightSection">
+          <img src="PngItem_5311716.png" alt="Profile" />
+        </div>
+      </section>
+
+      <hr />
+
+      <section class="secondSection">
+        <span class="text-gray">What I have done so far</span>
+        <h1>Work Experience</h1>
+
+        <div class="box">
+          <div class="vertical">
+            <img src="html logo png.png" alt="HTML" />
+            <div class="vertical-title">
+              Mastering HTML(21 APRIL, 2024 - 21 MAY, 2024)
+            </div>
+            <div class="vertical-desc">
+              I Learned:
+              <ul>
+                <li>HTML Basics</li>
+                <li>Semantic Tags & Non-Semantic Tags</li>
+                <li>Layouts</li>
+                <li>Block Elements & Inline Elements</li>
+                <li>Form</li>
+                <li>Table</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="vertical">
+            <img src="css-logo.png" alt="CSS" />
+            <div class="vertical-titleTwo">
+              Mastering CSS(25 MAY, 2024 - 20 JUNE, 2024)
+            </div>
+            <div class="vertical-descTwo">
+              I Learned:
+              <ul>
+                <li>CSS Basics</li>
+                <li>Selectors</li>
+                <li>Units</li>
+                <li>Positions</li>
+                <li>Flexbox</li>
+                <li>Z-index</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="vertical">
+            <img src="js logo.png" alt="JS" />
+            <div class="vertical-titleThree">
+              Mastering JS(22 JUNE, 2024 - 21 AUGUST, 2024)
+            </div>
+            <div class="vertical-descThree">
+              I Learned:
+              <ul>
+                <li>JS Basics</li>
+                <li>Datatypes</li>
+                <li>Operators</li>
+                <li>Array</li>
+                <li>Function</li>
+                <li>API</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer">
+        <div class="footer-first">
+          <h3>Vinay's Developer Portfolio</h3
+          --------------------------------
+
+
+
+          <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: #faf7f0;
+        color: white;
+        font-family: "Poppins", sans-serif;
+      }
+
+      nav {
+        display: flex;
+
+        align-items: center;
+        height: 80px;
+        background-color: #d8d2c2;
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: center;
+      }
+
+      nav ul li {
+        list-style: none;
+        margin: 0 23px;
+        margin-right: 122px;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: #b17457;
+      }
+
+      nav ul li a:hover {
+        color: rgb(153, 153, 226);
+      }
+
+      .left {
+        font-size: 1.5rem;
+        margin-left: 6px;
+        margin-right: 3px;
+        font-size: 51px;
+        font-weight: bolder;
+      }
+
+      .right {
+        margin-left: 220px;
+        font-size: 22px;
+      }
+
+      .firstSection {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 130px 0;
+        color: #3c3d37;
+      }
+
+      .firstSection > div {
+        width: 30%;
+      }
+
+      .leftSection {
+        font-size: 3rem;
+      }
+
+      .rightSection img {
+        width: 80%;
+        margin: 50px 0;
+      }
+
+      .purple {
+        color: #b17457;
+      }
+
+      #element {
+        color: #6cbec7;
+      }
+
+      .secondSection {
+        max-width: 80vw;
+        margin: auto;
+        height: 80vh;
+      }
+
+      main hr {
+        border: 0;
+        background: #9c97f1;
+        height: 1.2px;
+        margin: 40px 84px;
+      }
+
+      .secondSection h1 {
+        font-size: 1.9rem;
+      }
+
+      .text-gray {
+        color: gray;
+      }
+
+      .secondSection .box {
+        background: #3c3d37;
+        width: 80vw;
+        height: 2px;
+        margin: 56px;
+        display: flex;
+      }
+
+      .secondSection .vertical {
+        background-color: black;
+        height: 93px;
+        width: 1px;
+        margin: 0 13vw;
+      }
+
+      .image-top {
+        width: 40px;
+        position: relative;
+        top: -44px;
+        left: -20px;
+      }
+
+      .image-topTwo {
+        width: 26px;
+        position: relative;
+        top: -43px;
+        left: -13px;
+      }
+
+      .image-topThree {
+        width: 26px;
+        position: relative;
+        top: -36px;
+        left: -12px;
+      }
+
+      .vertical-title {
+        margin-top: 54px;
+        margin-left: -167px;
+        width: 377px;
+        color: #16423c;
+        font-size: 15px;
+      }
+
+      .vertical-titleTwo {
+        margin-top: 55px;
+        margin-left: -167px;
+        width: 377px;
+        color: #16423c;
+        font-size: 15px;
+      }
+
+      .vertical-titleThree {
+        margin-top: 63px;
+        margin-left: -167px;
+        width: 377px;
+        color: #16423c;
+        font-size: 15px;
+      }
+
+      .vertical-desc {
+        width: 100px;
+        margin-top: 16px;
+        margin-left: -143px;
+        color: #16423c;
+      }
+
+      .vertical-descTwo {
+        width: 100px;
+        margin-top: 16px;
+        margin-left: -143px;
+        color: #16423c;
+      }
+
+      .vertical-descThree {
+        width: 100px;
+        margin-top: 16px;
+        margin-left: -143px;
+        color: #16423c;
+      }
+
+      .vertical-desc ul {
+        width: 308px;
+        color: rgb(153 153 226);
+        font-weight: bolder;
+        color: #16423c;
+      }
+
+      .vertical-descTwo ul {
+        width: 308px;
+        color: rgb(153 153 226);
+        font-weight: bolder;
+        color: #16423c;
+      }
+
+      .vertical-descThree ul {
+        width: 308px;
+        color: rgb(153 153 226);
+        font-weight: bolder;
+        color: #16423c;
+      }
+
+      footer {
+        background-color: #6c4e31;
+        padding: 12px 0;
+      }
+
+      .footer {
+        display: flex;
+        margin: 23px 122px;
+        justify-content: space-evenly;
+      }
+
+      .footer ul {
+        list-style: none;
+      }
+
+      .footer > div {
+        width: 223px;
+      }
+
+      footer .footer-rights {
+        text-align: center;
+        color: gray;
+        padding: 12px 0;
+      }
+
+      .footer-second a {
+        text-decoration: none;
+        color: white;
+      }
+    </style>
+
+
