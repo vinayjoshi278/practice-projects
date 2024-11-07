@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  line-height: 1.4;
+  font-weight: 300;
+}
+
+.hero_section {
+  background-image: url("hero_section.jpg");
+  width: 100%;
+  height: 60vmax;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.text_container {
+  color: #f33f61f0;
+  margin: 0 auto;
+  padding-top: 64px;
+  padding-left: 60px;
+  font-size: 43px;
+  transition: 0.2s ease-in;
+  cursor: default;
+  font-family: "Poppins", sans-serif, arial;
+}
+
+.lg_text_two {
+  color: #fff;
+  font-size: 71px;
+  font-weight: 400;
+  transition: 0.2s ease-in;
+  font-family: "Poppins", sans-serif, arial;
+}
+
+.black_box {
+  width: 100%;
+  background-color: #0e1020;
+  padding: 20px;
+}
+
+.black_box h2 {
+  font-weight: 300;
+  font-size: 54px;
+  color: #fff;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+}
+
+.black_box h2 span {
+  font-weight: 400;
+  font-size: 71px;
+  color: #e4c087;
+  font-family: "Poppins", sans-serif, arial;
+}
+
+.work {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 50px;
+  margin: 0 auto;
+  background-color: #beaec2;
+  font-family: "Poppins", sans-serif, arial;
+}
+
+.grid_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 314px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 3px 7px 30px rgb(1 1 1 / 30%);
+  transition: 0.2s ease-in-out;
+  background-color: #fff;
+}
+
+.card:hover {
+  transform: scale(1.04);
+  transition: 0.2s ease-in-out;
+}
+
+img {
+  margin: 10px 21px;
+  border-radius: 24px;
+}
+
+.card-content {
+  padding: 20px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.card-content h3 {
+  font-size: 20px;
+  margin: -27px 0px 20px 0px;
+}
+
+.bottom_section {
+  display: flex;
+  color: white;
+  border-top: 2px solid white;
+}
+
+.contact {
+  background-color: #532727;
+  font-family: "Raleway", sans-serif, arial;
+  border-right: 2px solid white;
+}
+
+.about {
+  background-color: #532727;
+  font-family: "Raleway", sans-serif, arial;
+}
+
+.contact,
+.about {
+  flex: 1;
+  min-height: 180px;
+  padding: 32px;
+}
+
+.contact p,
+.about p {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.contact h2,
+.about h2 {
+  font-size: 53px;
+}
+
+footer {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  font-family: "Raleway", sans-serif, arial;
+  text-transform: uppercase;
+}
