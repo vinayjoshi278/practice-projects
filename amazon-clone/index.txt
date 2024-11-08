@@ -1,0 +1,412 @@
+1. i stands for icon :- <i class="fa-regular fa-heart"></i>
+
+2. Amazon.com :- Global website.
+
+3. Amazon.in :- Indian website.
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazon-clone</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="nav-logo border">
+          <div class="logo"></div>
+        </div>
+
+        <div class="nav-address border">
+          <p class="add-first">Deliver to</p>
+          <div class="add-icon">
+            <i class="fa-solid fa-location-dot"></i>
+            <p class="add-second">India</p>
+          </div>
+        </div>
+
+        <div class="nav-search">
+          <select class="search-select">
+            <option>All</option>
+          </select>
+          <input placeholder="search Amazon" class="search-input" />
+          <div class="search-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+
+        <div class="nav-signin border">
+          <p><span>Hello, sign in</span></p>
+          <p class="nav-second">Account & List</p>
+        </div>
+
+        <div class="nav-return border">
+          <p><span>Returns</span></p>
+          <p class="nav-second">& Orders</p>
+        </div>
+
+        <div class="cart-bar">
+          <div class="cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+          <p class="one">Cart</p>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>
+
+
+* {
+  margin: 0;
+  font-family: Arial;
+  border: border-box;
+}
+
+.navbar {
+  display: flex;
+  height: 4.375rem;
+  background-color: #131921;
+  color: white;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.nav-logo {
+  position: relative;
+  height: 3.125rem;
+  width: 7.1875rem;
+  top: 0.375rem;
+  left: 0.5625rem;
+}
+
+.logo {
+  background-image: url("amzon_logo_png.png");
+  background-size: cover;
+  height: 1.625rem;
+  width: 74%;
+  margin: 0.875rem 0 0.625rem 1.125rem;
+}
+
+.border {
+  border: 0.09375rem solid transparent;
+  border-radius: 0.625rem;
+}
+
+.border:hover {
+  border: 0.09375rem solid white;
+}
+
+/* box 2 */
+
+.nav-address {
+  position: relative;
+  height: 2.625rem;
+  width: 5.625rem;
+  top: 0.3125rem;
+  left: 1.125rem;
+}
+
+.add-first {
+  color: #cccccc;
+  font-size: 0.8125rem;
+  margin-left: 1.625rem;
+  margin-top: 0.1875rem;
+}
+
+.add-second {
+  font-size: 0.875rem;
+  margin-left: 0.125rem;
+  font-weight: 900;
+}
+
+.add-icon {
+  display: flex;
+  align-items: center;
+  margin-left: 0.625rem;
+}
+
+/* box 3 */
+
+.nav-search {
+  display: flex;
+  justify-content: space-evenly;
+  width: 38.75rem;
+  height: 2.625rem;
+  border-radius: 0.25rem;
+  border: 0.125rem solid transparent;
+}
+
+.search-select {
+  background-color: #f3f3f3;
+  width: 3.125rem;
+  text-align: center;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  border-top-right-radius: 0rem;
+  border-bottom-right-radius: 0rem;
+  border: none;
+}
+
+.search-input {
+  width: 100%;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0rem;
+}
+
+.search-icon {
+  width: 2.8125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  background-color: #febd68;
+  color: #131921;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  border-top-left-radius: 0rem;
+  border-bottom-left-radius: 0rem;
+}
+
+.nav-search:hover {
+  border: 0.125rem solid orange;
+  border-radius: 0.4375rem;
+}
+
+.search-select:hover {
+  background-color: #ebe8e8;
+}
+
+.search-input:hover {
+  background-color: #ebe8e8;
+}
+
+.search-icon:hover {
+  background-color: #fcb457;
+}
+
+/* box 4 */
+
+.nav-signin {
+  height: 3rem;
+  width: 7.1875rem;
+}
+
+span {
+  font-size: 0.75rem;
+  margin-top: 0.625rem;
+  margin-left: 0.3125rem;
+}
+
+/* box 5 */
+
+.nav-second {
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-top: 0.3125rem;
+  margin-left: 0.3125rem;
+}
+
+.nav-return {
+  height: 2.875rem;
+  width: 4.3125rem;
+}
+
+/* box 6 */
+
+.cart-bar {
+  display: flex;
+  height: 3.125rem;
+  width: 4.6875rem;
+  border: 0.125rem solid transparent;
+}
+
+.cart-bar:hover {
+  border: 0.09375rem solid white;
+  border-radius: 0.625rem;
+}
+
+.cart {
+  margin-top: 0.625rem;
+  margin-left: 0.3125rem;
+  font-size: 1.5625rem;
+}
+
+.one {
+  font-size: 1.125rem;
+  margin-top: 1.25rem;
+  font-weight: 500;
+}
+
+______________________________________________________________
+
+by me :-
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazon-clone</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="nav-l ogo border">
+          <div class="logo"></div>
+        </div>
+
+        <div class="address border">
+          <span class="add-one">Deliver to</span>
+          <div class="icon-add-two">
+            <i class="fa-solid fa-location-dot"></i>
+            <p class="add-two">India</p>
+          </div>
+        </div>
+
+        <div class="search-bar">
+          <div class="select-item">
+            <select>
+              <option>All</option>
+            </select>
+          </div>
+          <div class="search-area">
+            <input type="search" />
+          </div>
+          <div class="search-item">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: arial;
+}
+
+*::selection {
+  color: white;
+  background-color: rgb(167, 110, 4);
+}
+
+header {
+  height: 5rem;
+  width: 100%;
+  background-color: rgb(13, 11, 34);
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-logo {
+  position: relative;
+  left: -28vw;
+  top: 1vw;
+  height: 2.2vw;
+  width: 6.8vw;
+  padding: 1vw 0.3vw 0.5vw 0.6vw;
+  border: 0.1vw solid transparent;
+}
+
+.border:hover {
+  border: 0.1vw solid white;
+  border-radius: 0.3vw;
+}
+
+.logo {
+  background-image: url("amzon_logo_png.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 2vw;
+  width: 20vw;
+}
+.nav-options li {
+  list-style: none;
+  color: red;
+}
+
+.address {
+  position: relative;
+  border: 0.1vw solid transparent;
+  left: -19vw;
+  top: -2.9vw;
+  width: 5vw;
+  height: 2.7vw;
+  padding: 0.6vw 0.5vw 0.4vw 0.6vw;
+}
+
+.add-one {
+  position: relative;
+  color: #cccccc;
+  font-size: 1vw;
+  left: 0.9vw;
+  display: block;
+}
+
+.icon-add-two {
+  display: flex;
+  font-size: 1.3vw;
+  align-items: center;
+}
+
+.add-two {
+  position: relative;
+  font-size: 1vw;
+  bottom: -0.25vw;
+  left: 0.1vw;
+  font-weight: 900;
+}
+
+.search-bar {
+  position: relative;
+  display: flex;
+  top: -6vw;
+  left: -11vw;
+}
+
+.select-item select {
+  height: 3vw;
+}
+
+.search-area input {
+  height: 3vw;
+  width: 40vw;
+  border-top-right-radius: 1px;
+}
+
+.search-item {
+  background-color: #edb757;
+  color: black;
+  width: 3vw;
+  height: 2.99vw;
+  text-align: cemter;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2vw;
+}
+______________________________________________________________
