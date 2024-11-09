@@ -45,7 +45,7 @@ a {
 
 header {
   background-color: var(--purple300);
-  position: fixed;
+  position: sticky;
   width: 100%;
   top: 0;
   z-index: 100;
@@ -232,105 +232,408 @@ nav ul li:hover {
 
 @media (max-width: 400px) {
   header {
-    font-size: 25px;
-    padding: 28px;
+    width: 25rem;
   }
-  .logo {
-    font-size: 35px;
+  header .container {
+    flex-direction: column;
+    font-size: 1rem;
+  }
+  header .container .logo {
+    font-size: 40px;
+    margin-bottom: 1rem;
+  }
+  main .hero-section {
+    height: 19rem;
+    width: 25rem;
+    padding: 1rem;
+  }
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  .hero-section h3 {
+    font-size: 0.8rem;
+  }
+  .hero-section p {
+    font-size: 0.5rem;
   }
   .music-section {
-    width: 65rem;
-    padding: 40px;
+    font-size: 1rem;
+    height: 27.5rem;
+    width: 25rem;
   }
-  .hero-section {
-    width: 65rem;
-    padding: 60px;
+  .music-section h4 {
+    font-size: 0.7rem;
   }
-  .video-section video {
-    width: 65rem;
+  .music-section p {
+    font-size: 0.6rem;
+  }
+  .ipad-iphone-img img {
+    width: 20rem;
+  }
+  .about-music {
+    padding-top: 10rem;
+    width: 25rem;
+  }
+  .about-music h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .about-music p {
+    font-size: 0.7rem;
+    margin: 0rem 1rem;
+  }
+  .about-music img {
+    width: 20rem;
+  }
+  .about-music button {
+    margin: 1rem 0rem;
+  }
+  .video-section {
+    width: 25rem;
+    height: 60rem;
+  }
+  .video-section h3 {
+    margin-top: 1rem;
   }
   .video-section p {
-    padding: 50px;
+    font-size: 0.7rem;
   }
   .gift-section {
-    width: 65rem;
-    padding: 0px 40px;
+    margin-top: -20rem;
+    flex-direction: column;
+    width: 25rem;
+  }
+  .gift-section img {
+    margin: 0 4rem;
+    width: 17rem;
+  }
+  .gift-section h3 {
+    font-size: 2rem;
+    margin: 0 auto;
+  }
+  .gift-section p {
+    font-size: 0.7rem;
+    padding: 2rem;
+  }
+  .gift-section button {
+    margin-left: 9.8rem;
   }
   footer {
-    width: 65rem;
+    width: 25rem;
   }
-  .footer-links h4,
-  ul {
-    padding: 10px;
+  footer h4 {
+    font-size: 0.6rem;
+  }
+  footer li {
+    font-size: 0.5rem;
+  }
+  .footer-lower p {
+    font-size: 0.5rem;
   }
 }
 
-@media (min-width: 401px) and (max-width: 1000px) {
+@media (min-width: 401px) and (max-width: 800px) {
   header {
-    font-size: 15px;
-    padding: 28px;
+    width: 63rem;
   }
-  .logo {
-    font-size: 35px;
+  header .container {
+    flex-direction: column;
+    font-size: 1.6rem;
+  }
+  header .container .logo {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  main .hero-section {
+    height: 19rem;
+    width: 63rem;
+    padding: 1rem;
+  }
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  .hero-section h3 {
+    font-size: 0.8rem;
+  }
+  .hero-section p {
+    font-size: 0.5rem;
   }
   .music-section {
-    width: 65rem;
-    padding: 40px;
+    font-size: 1rem;
+    height: 27.5rem;
+    width: 63rem;
   }
-  .hero-section {
-    width: 65rem;
-    padding: 60px;
+  .music-section h4 {
+    font-size: 0.7rem;
   }
-  .video-section video {
-    width: 65rem;
+  .music-section p {
+    font-size: 0.6rem;
+  }
+  .ipad-iphone-img img {
+    width: 20rem;
+  }
+  .about-music {
+    padding-top: 10rem;
+    width: 63rem;
+  }
+  .about-music h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .about-music p {
+    font-size: 0.7rem;
+    margin: 0rem 1rem;
+  }
+  .about-music img {
+    width: 20rem;
+  }
+  .about-music button {
+    margin: 1rem 0rem;
+  }
+  .video-section {
+    width: 63rem;
+    height: 60rem;
+  }
+  .video-section h3 {
+    margin-top: 1rem;
   }
   .video-section p {
-    padding: 50px;
+    font-size: 0.7rem;
   }
   .gift-section {
-    width: 65rem;
-    padding: 0px 40px;
+    margin-top: -8rem;
+
+    width: 63rem;
+  }
+  .gift-section img {
+    margin: 0 4rem;
+    width: 17rem;
+  }
+  .gift-section h3 {
+    font-size: 2rem;
+    margin: 0 auto;
+  }
+  .gift-section p {
+    font-size: 0.7rem;
+    padding: 2rem;
+  }
+  .gift-section button {
+    margin-left: 9.8rem;
   }
   footer {
-    width: 65rem;
+    width: 63rem;
   }
-  .footer-links h4,
-  ul {
-    padding: 10px;
+  footer h4 {
+    font-size: 0.6rem;
+  }
+  footer li {
+    font-size: 0.5rem;
+  }
+  .footer-lower p {
+    font-size: 0.5rem;
   }
 }
 
-@media (min-width: 1000px) and (max-width: 1100px) {
+@media (min-width: 801px) and (max-width: 1000px) {
   header {
-    font-size: 15px;
-    padding: 30px;
+    width: 63rem;
   }
-  .logo {
-    font-size: 35px;
+  header .container {
+    flex-direction: column;
+    font-size: 1.6rem;
+  }
+  header .container .logo {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  main .hero-section {
+    height: 19rem;
+    width: 63rem;
+    padding: 1rem;
+  }
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  .hero-section h3 {
+    font-size: 0.8rem;
+  }
+  .hero-section p {
+    font-size: 0.5rem;
   }
   .music-section {
-    width: 70rem;
-    padding: 40px;
+    font-size: 1rem;
+    height: 27.5rem;
+    width: 63rem;
   }
-  .hero-section {
-    width: 70rem;
-    padding: 60px;
+  .music-section h4 {
+    font-size: 0.7rem;
   }
-  .video-section video {
-    width: 70rem;
+  .music-section p {
+    font-size: 0.6rem;
+  }
+  .ipad-iphone-img img {
+    width: 20rem;
+  }
+  .about-music {
+    padding-top: 10rem;
+    width: 63rem;
+  }
+  .about-music h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .about-music p {
+    font-size: 0.7rem;
+    margin: 0rem 1rem;
+  }
+  .about-music img {
+    width: 20rem;
+  }
+  .about-music button {
+    margin: 1rem 0rem;
+  }
+  .video-section {
+    width: 63rem;
+    height: 60rem;
+  }
+  .video-section h3 {
+    margin-top: 1rem;
   }
   .video-section p {
-    padding: 50px;
+    font-size: 0.7rem;
   }
   .gift-section {
-    width: 65rem;
-    padding: 0px 40px;
+    margin-top: -8rem;
+
+    width: 63rem;
+  }
+  .gift-section img {
+    margin: 0 4rem;
+    width: 17rem;
+  }
+  .gift-section h3 {
+    font-size: 2rem;
+    margin: 0 auto;
+  }
+  .gift-section p {
+    font-size: 0.7rem;
+    padding: 2rem;
+  }
+  .gift-section button {
+    margin-left: 9.8rem;
   }
   footer {
-    width: 70rem;
+    width: 63rem;
   }
-  .footer-links h4,
-  ul {
-    padding: 10px;
+  footer h4 {
+    font-size: 0.6rem;
+  }
+  footer li {
+    font-size: 0.5rem;
+  }
+  .footer-lower p {
+    font-size: 0.5rem;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1300px) {
+  header {
+    width: 69rem;
+    padding: 2rem;
+  }
+  header .container {
+    font-size: 1.6rem;
+  }
+  header .container .logo {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  main .hero-section {
+    height: 19rem;
+    width: 69rem;
+    padding: 1rem;
+  }
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  .hero-section h3 {
+    font-size: 0.8rem;
+  }
+  .hero-section p {
+    font-size: 0.5rem;
+  }
+  .music-section {
+    font-size: 1rem;
+    height: 27.5rem;
+    width: 69rem;
+  }
+  .music-section h4 {
+    font-size: 0.7rem;
+  }
+  .music-section p {
+    font-size: 0.6rem;
+  }
+  .ipad-iphone-img img {
+    width: 20rem;
+  }
+  .about-music {
+    padding-top: 10rem;
+    width: 69rem;
+  }
+  .about-music h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .about-music p {
+    font-size: 0.7rem;
+    margin: 0rem 1rem;
+  }
+  .about-music img {
+    width: 20rem;
+  }
+  .about-music button {
+    margin: 1rem 0rem;
+  }
+  .video-section {
+    width: 69rem;
+    height: 60rem;
+  }
+  .video-section h3 {
+    margin-top: 1rem;
+  }
+  .video-section p {
+    font-size: 0.7rem;
+  }
+  .gift-section {
+    margin-top: -8rem;
+
+    width: 69rem;
+  }
+  .gift-section img {
+    margin: 0 4rem;
+    width: 17rem;
+  }
+  .gift-section h3 {
+    font-size: 2rem;
+    margin: 0 auto;
+  }
+  .gift-section p {
+    font-size: 0.7rem;
+    padding: 2rem;
+  }
+  .gift-section button {
+    margin-left: 9.8rem;
+  }
+  footer {
+    width: 69rem;
+  }
+  footer h4 {
+    font-size: 0.6rem;
+  }
+  footer li {
+    font-size: 0.5rem;
+  }
+  .footer-lower p {
+    font-size: 0.5rem;
   }
 }
