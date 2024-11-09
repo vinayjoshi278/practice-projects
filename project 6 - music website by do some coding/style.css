@@ -1,0 +1,336 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  line-height: 1.4;
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin: 50px;
+}
+
+:root {
+  --purple500: #281154;
+  --purple300: #270082;
+  --purple600: #1b0058;
+  --red688: #dc0000;
+  --body: #f9f6ff;
+  --max-width: 1200px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: var(--purple300);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  box-shadow: 5px 5px 5px rgba(1, 1, 1, 0.5);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 20px 0;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  transition: 0.2s ease-in;
+}
+
+button:hover {
+  opacity: 0.8;
+  transition: 0.2s ease-in;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  border-bottom: 2px solid transparent;
+  transition: 0.2s ease-in;
+}
+
+nav ul li:hover {
+  transform: scale(1.05);
+  border-bottom: 2px solid white;
+  transition: 0.2s ease-in;
+}
+
+.hero-section {
+  background-image: url(hero_image.png);
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: grid;
+  color: white;
+  place-items: center;
+  text-align: center;
+}
+
+.hero-section .container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.hero-section h1 {
+  font-size: 96px;
+}
+
+.hero-section h3 {
+  font-size: 32px;
+}
+
+.music-section {
+  padding-top: 50px;
+  background-color: var(--purple500);
+}
+
+.music-section .container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.ipad-iphone-img {
+  margin-top: -400px;
+  position: relative;
+  top: 400px;
+}
+
+.primary-btn {
+  background-color: var(--red688);
+  color: white;
+  border-radius: 0;
+  font-weight: 900;
+}
+
+.secondary-btn {
+  background-color: var(--purple300);
+  color: white;
+  border-radius: 0;
+  font-weight: 900;
+}
+
+.about-music {
+  padding-top: 500px;
+  display: grid;
+  place-items: center;
+  gap: 50px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.about-music p {
+  font-size: 18px;
+}
+
+.video-section {
+  display: grid;
+  place-items: center;
+  color: white;
+  text-align: center;
+  min-height: 800px;
+}
+
+.video-section .container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: -200px;
+}
+
+.video-section video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -100;
+}
+
+.video-section .container h3 {
+  margin-top: -600px;
+}
+
+.gift-section {
+  display: flex;
+  justify-content: center;
+  margin: 100px 0;
+  gap: 50px;
+  scroll-margin: 120px;
+}
+
+.gift-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-upper {
+  background-color: var(--purple600);
+  padding: 20px;
+}
+
+.footer-upper .container {
+  display: flex;
+  color: white;
+  justify-content: space-between;
+}
+
+.footer-upper h4 {
+  padding-bottom: 10px;
+  border-bottom: 2px solid white;
+  margin-bottom: 10px;
+}
+
+.footer-lower {
+  background-color: var(--purple300);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+@media (max-width: 400px) {
+  header {
+    font-size: 25px;
+    padding: 28px;
+  }
+  .logo {
+    font-size: 35px;
+  }
+  .music-section {
+    width: 65rem;
+    padding: 40px;
+  }
+  .hero-section {
+    width: 65rem;
+    padding: 60px;
+  }
+  .video-section video {
+    width: 65rem;
+  }
+  .video-section p {
+    padding: 50px;
+  }
+  .gift-section {
+    width: 65rem;
+    padding: 0px 40px;
+  }
+  footer {
+    width: 65rem;
+  }
+  .footer-links h4,
+  ul {
+    padding: 10px;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 1000px) {
+  header {
+    font-size: 15px;
+    padding: 28px;
+  }
+  .logo {
+    font-size: 35px;
+  }
+  .music-section {
+    width: 65rem;
+    padding: 40px;
+  }
+  .hero-section {
+    width: 65rem;
+    padding: 60px;
+  }
+  .video-section video {
+    width: 65rem;
+  }
+  .video-section p {
+    padding: 50px;
+  }
+  .gift-section {
+    width: 65rem;
+    padding: 0px 40px;
+  }
+  footer {
+    width: 65rem;
+  }
+  .footer-links h4,
+  ul {
+    padding: 10px;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1100px) {
+  header {
+    font-size: 15px;
+    padding: 30px;
+  }
+  .logo {
+    font-size: 35px;
+  }
+  .music-section {
+    width: 70rem;
+    padding: 40px;
+  }
+  .hero-section {
+    width: 70rem;
+    padding: 60px;
+  }
+  .video-section video {
+    width: 70rem;
+  }
+  .video-section p {
+    padding: 50px;
+  }
+  .gift-section {
+    width: 65rem;
+    padding: 0px 40px;
+  }
+  footer {
+    width: 70rem;
+  }
+  .footer-links h4,
+  ul {
+    padding: 10px;
+  }
+}
