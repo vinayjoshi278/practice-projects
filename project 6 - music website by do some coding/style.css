@@ -395,6 +395,7 @@ nav ul li:hover {
   }
   .gift-section {
     margin-top: -8rem;
+    flex-direction: column;
   }
   .gift-section img {
     margin: 0 4rem;
