@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Youtube | clone</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <aside>
+        <div class="icons">
+          <div class="side-icons">
+            <img src="bars.svg" alt="bars" />
+          </div>
+          <div class="side-icons">
+            <i><img src="home.svg" alt="home" /></i>
+            <p>Home</p>
+          </div>
+          <div class="side-icons">
+            <i><img src="compass.svg" alt="explore" /></i>
+            <p>Explore</p>
+          </div>
+          <div class="side-icons">
+            <i><img src="video-gallary.svg" alt="gallary" /></i>
+            <p>Subscription</p>
+          </div>
+          <div class="side-icons">
+            <i><img src="video-library.svg  " alt="library" /></i>
+            <p>Library</p>
+          </div>
+        </div>
+      </aside>
+
+      <div class="main-container">
+        <header>
+          <nav>
+            <div class="logo">
+              <img src="youtube-logo.png" alt="Youtube logo " />
+            </div>
+
+            <div class="center-nav">
+              <div class="search">
+                <input type="text" />
+                <button>
+                  <img src="search.svg" alt="search" />
+                </button>
+              </div>
+
+              <div class="mic">
+                <img src="mic.svg" alt="mic" />
+              </div>
+            </div>
+
+            <div class="side-nav">
+              <i>
+                <img src="video-add.svg" alt="video add" />
+              </i>
+              <i>
+                <img src="dot-grid.svg" alt="grid" />
+              </i>
+              <i>
+                <img src="bell.svg" alt="bell" />
+              </i>
+              <i class="avatar">
+                <img src="avatar.png" alt="avatar" />
+              </i>
+            </div>
+          </nav>
+
+          <div class="tags">
+            <div class="tag dark">All</div>
+            <div class="tag light">Mixes</div>
+            <div class="tag light">Crypto</div>
+            <div class="tag light">Html</div>
+            <div class="tag light">CSS</div>
+            <div class="tag light">Javascript</div>
+          </div>
+        </header>
+
+        <main>
+          <div class="card-container">
+            <div class="card">
+              <img
+                class="card-img"
+                src="https://i.ytimg.com/vi/dEU2ibHQnjM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLCKJdbxBDUefja4qkeVdyWFQfZisQ"
+                alt="thumbnail"
+              />
+              <div class="avatar-content">
+                <div class="avatar-img">
+                  <img src="profile-photo.jpg" alt="avatar" />
+                </div>
+
+                <div class="content">
+                  <h3>Work hard | Ezsnippet | Neeraj Walia</h3>
+
+                  <p class="channel-name">Ezsnippet</p>
+                  <div class="content-status">
+                    <p>10 lakh views</p>
+                    <p>1 day ago</p>
+                  </div>
+                </div>
+                <div class="dots">
+                  <img src="dots.svg" alt="dots" />
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                class="card-img"
+                src="https://i.ytimg.com/vi/ge3_A2VvI1M/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLDl82ClqE5GVcF-dBhT0xUPYA71Mg"
+                alt="thumbnail"
+              />
+              <div class="avatar-content">
+                <div class="avatar-img">
+                  <img src="profile-photo.jpg" alt="avatar" />
+                </div>
+
+                <div class="content">
+                  <h3>Kohli's iconic fifty takes india to final !</h3>
+
+                  <p class="channel-name">Aayush 18</p>
+                  <div class="content-status">
+                    <p>60 lakh views</p>
+                    <p>7 years ago</p>
+                  </div>
+                </div>
+                <div class="dots">
+                  <img src="dots.svg" alt="dots" />
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                class="card-img"
+                src="https://i.ytimg.com/vi/rsnQgsSPbwk/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDxAHFzgOrhAryVLdHUEh__aSIiPA"
+                alt="thumbnail"
+              />
+              <div class="avatar-content">
+                <div class="avatar-img">
+                  <img src="profile-photo.jpg" alt="avatar" />
+                </div>
+
+                <div class="content">
+                  <h3>Is DSA better than DEV ? | Which is more important ?</h3>
+
+                  <p class="channel-name">Akshat Sinha</p>
+                  <div class="content-status">
+                    <p>1.3 lakh views</p>
+                    <p>9 weeks ago</p>
+                  </div>
+                </div>
+                <div class="dots">
+                  <img src="dots.svg" alt="dots" />
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                class="card-img"
+                src="https://i.ytimg.com/vi/T-bEgjUBVBU/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCvVQPdqEatpVaH6NGuhWpOLfRzFw"
+                alt="thumbnail"
+              />
+              <div class="avatar-content">
+                <div class="avatar-img">
+                  <img src="profile-photo.jpg" alt="avatar" />
+                </div>
+
+                <div class="content">
+                  <h3>Reasons why trumps love India | By Prashant Dhawan</h3>
+
+                  <p class="channel-name">Prashant Dhawan</p>
+                  <div class="content-status">
+                    <p>15.3 lakh views</p>
+                    <p>1 week ago</p>
+                  </div>
+                </div>
+                <div class="dots">
+                  <img src="dots.svg" alt="dots" />
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                class="card-img"
+                src="https://i.ytimg.com/vi/l9ZO_m7v5j8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAz0B6XELZ2tYZ5-q-m12y2i-PcAQ"
+                alt="thumbnail"
+              />
+              <div class="avatar-content">
+                <div class="avatar-img">
+                  <img src="profile-photo.jpg" alt="avatar" />
+                </div>
+
+                <div class="content">
+                  <h3>Kyu Jethalal fafda khaate khaate ruk gaya ?</h3>
+
+                  <p class="channel-name">Sony SAB</p>
+                  <div class="content-status">
+                    <p>25 lakh views</p>
+                    <p>8 months ago</p>
+                  </div>
+                </div>
+                <div class="dots">
+                  <img src="dots.svg" alt="dots" />
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                class="card-img"
+                src="https://i.ytimg.com/vi/4eV-3OoNSZA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDd6kJ6dGu3vnF80UF3WQhRObgtUA"
+                alt="thumbnail"
+              />
+              <div class="avatar-content">
+                <div class="avatar-img">
+                  <img src="profile-photo.jpg" alt="avatar" />
+                </div>
+
+                <div class="content">
+                  <h3>Become Elon Musk before 25 | A to Z Motivation</h3>
+
+                  <p class="channel-name">A to Z Motivation</p>
+                  <div class="content-status">
+                    <p>55 lakh views</p>
+                    <p>1 year ago</p>
+                  </div>
+                </div>
+                <div class="dots">
+                  <img src="dots.svg" alt="dots" />
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                class="card-img"
+                src="https://i.ytimg.com/vi/TUD1AWZVgQ8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAFiJmJ0wb2KriebawcClzrWKDMwA"
+                alt="thumbnail"
+              />
+              <div class="avatar-content">
+                <div class="avatar-img">
+                  <img src="profile-photo.jpg" alt="avatar" />
+                </div>
+
+                <div class="content">
+                  <h3>This thing is much better than Media queries</h3>
+
+                  <p class="channel-name">Do some coding</p>
+                  <div class="content-status">
+                    <p>1 lakh views</p>
+                    <p>3 weeks ago</p>
+                  </div>
+                </div>
+                <div class="dots">
+                  <img src="dots.svg" alt="dots" />
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                class="card-img"
+                src="https://i.ytimg.com/vi/ancv4uwNNoA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCa05Whgjo8qunod46oUomgtB_tTA"
+                alt="thumbnail"
+              />
+              <div class="avatar-content">
+                <div class="avatar-img">
+                  <img src="profile-photo.jpg" alt="avatar" />
+                </div>
+
+                <div class="content">
+                  <h3>My Latest Ladakh Vlog | Beautiful Journey</h3>
+
+                  <p class="channel-name">Ezsnippet</p>
+                  <div class="content-status">
+                    <p>3 lakh views</p>
+                    <p>10 months ago</p>
+                  </div>
+                </div>
+                <div class="dots">
+                  <img src="dots.svg" alt="dots" />
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                class="card-img"
+                src="https://i.ytimg.com/vi/JqJeqhoCPWA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBG_oL0g9ev-3X8bFfh2uI5IfBECw"
+                alt="thumbnail"
+              />
+              <div class="avatar-content">
+                <div class="avatar-img">
+                  <img src="profile-photo.jpg" alt="avatar" />
+                </div>
+
+                <div class="content">
+                  <h3>Minions : The rise of gru | Funny Moments</h3>
+
+                  <p class="channel-name">Warner Bros</p>
+                  <div class="content-status">
+                    <p>60 lakh views</p>
+                    <p>4 years ago</p>
+                  </div>
+                </div>
+                <div class="dots">
+                  <img src="dots.svg" alt="dots" />
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                class="card-img"
+                src="https://i.ytimg.com/vi/76bQmdOsjsc/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDz1NFmsGD7eZ7VXhQwkJBYahJp4g"
+                alt="thumbnail"
+              />
+              <div class="avatar-content">
+                <div class="avatar-img">
+                  <img src="profile-photo.jpg" alt="avatar" />
+                </div>
+
+                <div class="content">
+                  <h3>Most Demanding skills in future | Sarthak Solutions</h3>
+
+                  <p class="channel-name">Sarthak Solutions</p>
+                  <div class="content-status">
+                    <p>2 lakh views</p>
+                    <p>1 month ago</p>
+                  </div>
+                </div>
+                <div class="dots">
+                  <img src="dots.svg" alt="dots" />
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                class="card-img"
+                src="https://i.ytimg.com/vi/2E03Nz0RJ0E/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCAD1VaK-H0MdCG6Q3wJyGvh0HkeQ"
+                alt="thumbnail"
+              />
+              <div class="avatar-content">
+                <div class="avatar-img">
+                  <img src="profile-photo.jpg" alt="avatar" />
+                </div>
+
+                <div class="content">
+                  <h3>Free hosting by this website | Aalekh Coding</h3>
+
+                  <p class="channel-name">Aalekh Coding</p>
+                  <div class="content-status">
+                    <p>12k views</p>
+                    <p>9 hours ago</p>
+                  </div>
+                </div>
+                <div class="dots">
+                  <img src="dots.svg" alt="dots" />
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                class="card-img"
+                src="https://i.ytimg.com/vi/RCOtW5BAJhs/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD_Oa4OOER1rTXCHm96WtjLgqEhBQ"
+                alt="thumbnail"
+              />
+              <div class="avatar-content">
+                <div class="avatar-img">
+                  <img src="profile-photo.jpg" alt="avatar" />
+                </div>
+
+                <div class="content">
+                  <h3>GOAT Rohit Sharma's Fastest Century</h3>
+
+                  <p class="channel-name">Fox Cricket</p>
+                  <div class="content-status">
+                    <p>45 cr views</p>
+                    <p>1 day ago</p>
+                  </div>
+                </div>
+                <div class="dots">
+                  <img src="dots.svg" alt="dots" />
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                class="card-img"
+                src="https://i.ytimg.com/vi/arn6ZdQqwZc/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCzuDqxjcmbymJVEnV9EqdQpGbzgQ"
+                alt="thumbnail"
+              />
+              <div class="avatar-content">
+                <div class="avatar-img">
+                  <img src="profile-photo.jpg" alt="avatar" />
+                </div>
+
+                <div class="content">
+                  <h3>Is really clone projects give you job ?</h3>
+
+                  <p class="channel-name">Sheriyans coding school</p>
+                  <div class="content-status">
+                    <p>9.4 lakh views</p>
+                    <p>2 months ago</p>
+                  </div>
+                </div>
+                <div class="dots">
+                  <img src="dots.svg" alt="dots" />
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                class="card-img"
+                src="https://i.ytimg.com/vi/XGa4onZP66Q/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDM0srWq1dV9YnxLRtDhPB8-VwYfQ"
+                alt="thumbnail"
+              />
+              <div class="avatar-content">
+                <div class="avatar-img">
+                  <img src="profile-photo.jpg" alt="avatar" />
+                </div>
+
+                <div class="content">
+                  <h3>What is an API ? | Apna college</h3>
+
+                  <p class="channel-name">Apna college</p>
+                  <div class="content-status">
+                    <p>10 lakh views</p>
+                    <p>3 months ago</p>
+                  </div>
+                </div>
+                <div class="dots">
+                  <img src="dots.svg" alt="dots" />
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                class="card-img"
+                src="https://i.ytimg.com/vi/M3ygFVrfR6E/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBk70XfPGYOf3vskmd0FDo-HK3GMg"
+                alt="thumbnail"
+              />
+              <div class="avatar-content">
+                <div class="avatar-img">
+                  <img src="profile-photo.jpg" alt="avatar" />
+                </div>
+
+                <div class="content">
+                  <h3>Bumrah's masterclass of 35 runs in an over</h3>
+
+                  <p class="channel-name">ICC</p>
+                  <div class="content-status">
+                    <p>30 lakh views</p>
+                    <p>1 month ago</p>
+                  </div>
+                </div>
+                <div class="dots">
+                  <img src="dots.svg" alt="dots" />
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                class="card-img"
+                src="https://i.ytimg.com/vi/7f7fgMGOXVs/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCt7sRMkcX--xUIsCNL-zsfeF42Kg"
+                alt="thumbnail"
+              />
+              <div class="avatar-content">
+                <div class="avatar-img">
+                  <img src="profile-photo.jpg" alt="avatar" />
+                </div>
+
+                <div class="content">
+                  <h3>Advise for 23 year old men | A to Z Motivation</h3>
+
+                  <p class="channel-name">A to Z Motivation</p>
+                  <div class="content-status">
+                    <p>65 lakh views</p>
+                    <p>3 years ago</p>
+                  </div>
+                </div>
+                <div class="dots">
+                  <img src="dots.svg" alt="dots" />
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                class="card-img"
+                src="https://i.ytimg.com/vi/FWyiYzgPNi4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDc2QjpcUSrUS3agw6BGKK6HDx7Mg"
+                alt="thumbnail"
+              />
+              <div class="avatar-content">
+                <div class="avatar-img">
+                  <img src="profile-photo.jpg" alt="avatar" />
+                </div>
+
+                <div class="content">
+                  <h3>
+                    How Programmer thinks ? | Coding | Softwar Engineering
+                  </h3>
+
+                  <p class="channel-name">Code Hub</p>
+                  <div class="content-status">
+                    <p>11 lakh views</p>
+                    <p>1 week ago</p>
+                  </div>
+                </div>
+                <div class="dots">
+                  <img src="dots.svg" alt="dots" />
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                class="card-img"
+                src="https://i.ytimg.com/vi/pLag3SkeRjI/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBsul9_NO4FZFa5IcZ6xOdZTel39w"
+                alt="thumbnail"
+              />
+              <div class="avatar-content">
+                <div class="avatar-img">
+                  <img src="profile-photo.jpg" alt="avatar" />
+                </div>
+
+                <div class="content">
+                  <h3>Fresher Front-end interview | Mock interview</h3>
+
+                  <p class="channel-name">Harsh codes</p>
+                  <div class="content-status">
+                    <p>12.5 lakh views</p>
+                    <p>5 months ago</p>
+                  </div>
+                </div>
+                <div class="dots">
+                  <img src="dots.svg" alt="dots" />
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                class="card-img"
+                src="https://i.ytimg.com/vi/AKh098uPq8U/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBWLrfN0lP0Ci5_DB9TsYypJ5ZFFA"
+              />
+              <div class="avatar-content">
+                <div class="avatar-img">
+                  <img src="profile-photo.jpg" alt="avatar" />
+                </div>
+
+                <div class="content">
+                  <h3>Can AI Replace you in future ? | Neeraj Walia</h3>
+
+                  <p class="channel-name">Ezsnippet</p>
+                  <div class="content-status">
+                    <p>16 lakh views</p>
+                    <p>3 weeks ago</p>
+                  </div>
+                </div>
+                <div class="dots">
+                  <img src="dots.svg" alt="dots" />
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                class="card-img"
+                src="https://i.ytimg.com/vi/fxTcO_4abyg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDSedyPG-wot5BbnWYaSmjBqHDM8w"
+                alt="thumbnail"
+              />
+              <div class="avatar-content">
+                <div class="avatar-img">
+                  <img src="profile-photo.jpg" alt="avatar" />
+                </div>
+
+                <div class="content">
+                  <h3>Wake up, Sleep, Work, Repeat</h3>
+
+                  <p class="channel-name">Motivational Gyan</p>
+                  <div class="content-status">
+                    <p>76 lakh views</p>
+                    <p>7 months ago</p>
+                  </div>
+                </div>
+                <div class="dots">
+                  <img src="dots.svg" alt="dots" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
