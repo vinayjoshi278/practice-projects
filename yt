@@ -41,7 +41,7 @@
 
             <div class="center-nav">
               <div class="search">
-                <input type="text" />
+                <input type="text" placeholder="Search" />
                 <button>
                   <img src="search.svg" alt="search" />
                 </button>
